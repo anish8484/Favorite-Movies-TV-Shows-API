@@ -1,0 +1,29 @@
+// prisma/schema.prisma
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// Enum for Type (Movie/TV Show)
+enum EntryType {
+  Movie
+  TVShow
+}
+
+model Entry {
+  id        String    @id @default(uuid())
+  title     String    @unique
+  type      EntryType
+  director  String
+  budget    String    // Using String to handle currency/non-uniform formats easily
+  location  String
+  duration  String    // e.g., "150 mins" for Movie, "60 mins/episode" for TV Show
+  yearTime  String    // e.g., "2023" for Movie, "2020-2023" for TV Show
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+}
