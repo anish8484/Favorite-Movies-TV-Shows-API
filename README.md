@@ -1,6 +1,38 @@
 # Favorite-Movies-TV-Shows-API
 A simple RESTful service built with Node.js, Express, and Prisma/PostgreSQL to manage a list of favorite movies and TV shows.
 
+Project Structure & Setup
+Here is the suggested project structure:
+
+favorite-media-api/
+├── node_modules/
+├── prisma/
+│   ├── migrations/
+│   │   └── <timestamp>_init/
+│   │       └── migration.sql
+│   ├── schema.prisma   <-- Database schema (Prisma model)
+│   └── seed.js         <-- Database seeding script
+├── src/
+│   ├── config/
+│   │   └── index.js      <-- Configuration (e.g., port)
+│   ├── controllers/
+│   │   └── entry.controller.js  <-- Business logic
+│   ├── middlewares/
+│   │   └── validation.middleware.js <-- Input validation
+│   ├── models/
+│   │   └── entry.model.js  <-- Data structure/Types (optional, can rely on Prisma)
+│   ├── routes/
+│   │   └── entry.routes.js      <-- Express routes
+│   ├── services/
+│   │   └── entry.service.js     <-- Database interaction (Prisma client)
+│   ├── utils/
+│   │   └── validationSchemas.js <-- Validation schemas (Zod/Joi)
+│   └── app.js             <-- Main Express application setup
+├── .env                  <-- Environment variables (Database URL)
+├── .gitignore
+├── package.json
+└── README.md             <-- Submission Guide
+
 ## ⚙️ Technology Stack
 
 * **Backend Framework:** Node.js, Express
