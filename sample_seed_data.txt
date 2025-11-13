@@ -1,0 +1,22 @@
+Sample Seed Data Description
+
+The database is seeded with four entries: two Movies (Dune, Inception) and two TV Shows (Arcane, Succession).
+
+Field	Example (Movie)	Example (TV Show)
+title	Dune	Arcane
+type	Movie	TVShow
+director	Denis Villeneuve	Pascal Charrue & Arnaud Delord
+budget	$165 million	Est. $9-10 million per episode
+location	Budapest, Hungary	Fortis, France
+duration	155 mins	40-45 mins/episode
+yearTime	2021	2021-Present
+
+
+🚀 API Endpoints
+All endpoints are prefixed with /api/entries.
+
+Method	Endpoint	Description	Validation/Notes
+POST	/api/entries	Add a new favorite entry.	All fields are required and validated by Zod.
+GET	/api/entries	List all entries with pagination.	Query Params: ?page=1&limit=10. Bonus: ?search=title
+PUT	/api/entries/:id	Update an existing entry.	Fields in body are validated by Zod. ID must be a valid UUID.
+DELETE	/api/entries/:id	Delete an entry.	ID must be a valid UUID. Returns 204 No Content on success.
