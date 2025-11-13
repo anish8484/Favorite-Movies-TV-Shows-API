@@ -44,12 +44,12 @@ Apply the Prisma schema to your PostgreSQL database. This will create the `Entry
 ```bash
 npm run prisma:migrate
 
-### 5. Initial sample data (2 Movies, 2 TV Shows)
+5. Initial sample data (2 Movies, 2 TV Shows)
 
 ```bash
 npm run prisma:seed
 
-### 6. Development mode
+6. Development mode
 
 ```bash
 npm run dev
