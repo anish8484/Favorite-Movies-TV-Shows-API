@@ -1,0 +1,22 @@
+{
+  "name": "favorite-media-api",
+  "version": "1.0.0",
+  "description": "Favorite Movies & TV Shows REST API",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js",
+    "prisma:migrate": "prisma migrate dev --name init",
+    "prisma:seed": "node prisma/seed.js"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.x.x",
+    "dotenv": "^16.x.x",
+    "express": "^4.x.x",
+    "zod": "^3.x.x"
+  },
+  "devDependencies": {
+    "nodemon": "^3.x.x",
+    "prisma": "^5.x.x"
+  }
+}
