@@ -2,14 +2,14 @@ Sample Seed Data Description
 
 The database is seeded with four entries: two Movies (Dune, Inception) and two TV Shows (Arcane, Succession).
 
-Field	Example (Movie)	Example (TV Show)
-title	Dune	Arcane
-type	Movie	TVShow
-director	Denis Villeneuve	Pascal Charrue & Arnaud Delord
-budget	$165 million	Est. $9-10 million per episode
-location	Budapest, Hungary	Fortis, France
-duration	155 mins	40-45 mins/episode
-yearTime	2021	2021-Present
+Field	     Example (Movie)	   Example (TV Show)
+title	     Dune	               Arcane
+type	     Movie	             TVShow
+director	 Denis Villeneuve	   Pascal Charrue & Arnaud Delord
+budget	   $165 million	Est.   $9-10 million per episode
+location	 Budapest, Hungary	 Fortis, France
+duration	 155 mins	           40-45 mins/episode
+yearTime	 2021	               2021-Present
 
 
 🚀 API Endpoints
